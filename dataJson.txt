@@ -1,0 +1,379 @@
+{
+  "categorias": [
+    {
+      "nombre": "Barbería",
+      "servicios": [
+        {
+          "nombre": "Corte de Caballero",
+          "precio": 180,
+          "descripcion": "Corte clásico o moderno para caballero, adaptado al estilo y forma del rostro."
+        },
+        {
+          "nombre": "Corte de Niño",
+          "precio": 160,
+          "descripcion": "Corte de cabello para niños con atención personalizada y acabado profesional."
+        },
+        {
+          "nombre": "Barba Limpieza",
+          "precio": 70,
+          "descripcion": "Perfilado y limpieza básica de barba para una apariencia ordenada."
+        },
+        {
+          "nombre": "Barba Completa",
+          "precio": 120,
+          "descripcion": "Diseño, perfilado y arreglo completo de barba según el estilo deseado."
+        },
+        {
+          "nombre": "Cejas con Navaja",
+          "precio": 60,
+          "descripcion": "Definición y limpieza de cejas utilizando navaja para mayor precisión."
+        },
+        {
+          "nombre": "Corte Largo (Caballero)",
+          "precio": 220,
+          "descripcion": "Corte especializado para cabellos largos masculinos con técnicas de estilismo."
+        },
+        {
+          "nombre": "Masaje de Vibración Craneal",
+          "precio": 60,
+          "descripcion": "Masaje relajante en cuero cabelludo para aliviar tensión y estimular la circulación."
+        }
+      ]
+    },
+    {
+      "nombre": "Depilación Facial",
+      "servicios": [
+        {
+          "nombre": "Depilación Cejas",
+          "precio": 60,
+          "descripcion": "Diseño y depilación de cejas para mejorar la armonía facial."
+        },
+        {
+          "nombre": "Depilación Bozo",
+          "precio": 120,
+          "descripcion": "Eliminación del vello en la zona superior del labio."
+        },
+        {
+          "nombre": "Depilación Patilla",
+          "precio": 150,
+          "descripcion": "Remoción de vello en la zona de las patillas para un acabado limpio."
+        },
+        {
+          "nombre": "Depilación Nariz",
+          "precio": 120,
+          "descripcion": "Eliminación segura del vello visible en las fosas nasales."
+        }
+      ]
+    },
+    {
+      "nombre": "Uñas",
+      "servicios": [
+        {
+          "nombre": "Acrílicas",
+          "precio_desde": 450,
+          "descripcion": "Aplicación de uñas acrílicas resistentes y personalizables."
+        },
+        {
+          "nombre": "Gel",
+          "precio_desde": 250,
+          "descripcion": "Aplicación de gel para fortalecer y embellecer las uñas."
+        },
+        {
+          "nombre": "Rubber",
+          "precio": 200,
+          "descripcion": "Base rubber para reforzar uñas naturales y mejorar su duración."
+        },
+        {
+          "nombre": "Manicura",
+          "precio": 200,
+          "descripcion": "Limpieza, corte, limado y cuidado completo de las uñas de las manos."
+        },
+        {
+          "nombre": "Pedicura",
+          "precio": 250,
+          "descripcion": "Tratamiento estético y de cuidado para los pies y uñas."
+        },
+        {
+          "nombre": "Manicura más Gel",
+          "precio": 380,
+          "descripcion": "Manicura completa complementada con aplicación de gel."
+        },
+        {
+          "nombre": "Pedicura más Gel",
+          "precio": 480,
+          "descripcion": "Pedicura profesional con acabado en gel de larga duración."
+        },
+        {
+          "nombre": "Retiro de Uñas",
+          "precio": 150,
+          "descripcion": "Retiro seguro de uñas acrílicas o de gel sin dañar la uña natural."
+        },
+        {
+          "nombre": "Retoque de Uñas",
+          "precio": 280,
+          "descripcion": "Mantenimiento y relleno para conservar la apariencia de las uñas."
+        },
+        {
+          "nombre": "Esmaltado de Mano",
+          "precio": 120,
+          "descripcion": "Aplicación de esmalte con acabado uniforme en uñas de las manos."
+        },
+        {
+          "nombre": "Esmaltado en Pies",
+          "precio": 120,
+          "descripcion": "Aplicación de esmalte para embellecer las uñas de los pies."
+        }
+      ]
+    },
+    {
+      "nombre": "Depilación Corporal",
+      "servicios": [
+        {
+          "nombre": "Depilación Bikini",
+          "precio": 400,
+          "descripcion": "Eliminación de vello en la línea del bikini con acabado limpio."
+        },
+        {
+          "nombre": "Depilación Bikini Brasileño",
+          "precio": 500,
+          "descripcion": "Depilación profunda de la zona íntima con estilo brasileño."
+        },
+        {
+          "nombre": "Depilación Axilas",
+          "precio": 180,
+          "descripcion": "Remoción de vello en axilas para una piel suave y limpia."
+        },
+        {
+          "nombre": "Depilación Media Pierna",
+          "precio": 280,
+          "descripcion": "Depilación desde el tobillo hasta la rodilla o viceversa."
+        },
+        {
+          "nombre": "Depilación Pierna Completa",
+          "precio": 400,
+          "descripcion": "Eliminación de vello en toda la pierna para una piel uniforme."
+        }
+      ]
+    },
+    {
+      "nombre": "Corte y Servicios de Dama",
+      "servicios": [
+        {
+          "nombre": "Corte Dama",
+          "precio": 280,
+          "descripcion": "Corte de cabello femenino adaptado al estilo y preferencias de la clienta."
+        },
+        {
+          "nombre": "Corte Fleco",
+          "precio": 100,
+          "descripcion": "Diseño y mantenimiento de fleco para renovar el look."
+        },
+        {
+          "nombre": "Corte Niña",
+          "precio": 180,
+          "descripcion": "Corte infantil femenino con atención especializada."
+        },
+        {
+          "nombre": "Retoque de Color",
+          "precio": 550,
+          "descripcion": "Aplicación de color para cubrir crecimiento y mantener el tono."
+        },
+        {
+          "nombre": "Baño de Color",
+          "precio": 750,
+          "descripcion": "Tratamiento de coloración que aporta brillo y uniformidad al cabello."
+        }
+      ]
+    },
+    {
+      "nombre": "Peinados",
+      "servicios": [
+        {
+          "nombre": "Planchado Express",
+          "precio_desde": 250,
+          "descripcion": "Alisado rápido para un acabado elegante y definido."
+        },
+        {
+          "nombre": "Onda con Tenaza",
+          "precio_desde": 250,
+          "descripcion": "Creación de ondas y rizos utilizando tenaza profesional."
+        },
+        {
+          "nombre": "Peinado Niña",
+          "precio": 450,
+          "descripcion": "Peinado especial para niñas en eventos o celebraciones."
+        },
+        {
+          "nombre": "Peinado Casual",
+          "precio": 700,
+          "descripcion": "Peinado versátil para ocasiones sociales o uso diario."
+        }
+      ]
+    },
+    {
+      "nombre": "Tratamientos Capilares",
+      "servicios": [
+        {
+          "nombre": "Keratina Cabello Corto",
+          "precio": 1500,
+          "descripcion": "Tratamiento de keratina para reducir frizz y aportar brillo en cabello corto."
+        },
+        {
+          "nombre": "Keratina Cabello Medio",
+          "precio": 2200,
+          "descripcion": "Keratina para alisar y nutrir cabello de longitud media."
+        },
+        {
+          "nombre": "Keratina Cabello Largo",
+          "precio": 3000,
+          "descripcion": "Tratamiento intensivo de keratina para cabello largo."
+        },
+        {
+          "nombre": "Botox Capilar Corto",
+          "precio": 800,
+          "descripcion": "Reparación profunda y revitalización para cabello corto."
+        },
+        {
+          "nombre": "Botox Capilar Medio",
+          "precio": 1000,
+          "descripcion": "Tratamiento restaurador que aporta hidratación y brillo."
+        },
+        {
+          "nombre": "Botox Capilar Largo",
+          "precio": 1200,
+          "descripcion": "Nutrición intensiva para recuperar la salud del cabello largo."
+        },
+        {
+          "nombre": "Alaciado Permanente Corto",
+          "precio": 1800,
+          "descripcion": "Alisado de larga duración para cabello corto."
+        },
+        {
+          "nombre": "Alaciado Permanente Medio",
+          "precio": 2600,
+          "descripcion": "Tratamiento de alaciado permanente para cabello medio."
+        },
+        {
+          "nombre": "Alaciado Permanente Largo",
+          "precio": 3400,
+          "descripcion": "Alisado profesional para cabello largo con resultados duraderos."
+        },
+        {
+          "nombre": "Base Permanente (Chinos) Corto",
+          "precio": 800,
+          "descripcion": "Creación de rizos permanentes en cabello corto."
+        },
+        {
+          "nombre": "Base Permanente (Chinos) Medio",
+          "precio": 1200,
+          "descripcion": "Definición de rizos permanentes para cabello medio."
+        },
+        {
+          "nombre": "Base Permanente (Chinos) Largo",
+          "precio": 1600,
+          "descripcion": "Tratamiento permanente para crear rizos en cabello largo."
+        },
+        {
+          "nombre": "Hidratación Profunda",
+          "precio": 580,
+          "descripcion": "Tratamiento intensivo que devuelve suavidad y humedad al cabello."
+        },
+        {
+          "nombre": "Reparación Capilar",
+          "precio": 900,
+          "descripcion": "Recuperación de cabello dañado mediante nutrición y fortalecimiento."
+        }
+      ]
+    },
+    {
+      "nombre": "Procesos Capilares",
+      "servicios": [
+        {
+          "nombre": "Extracción de Color",
+          "precio": 1200,
+          "descripcion": "Proceso para remover pigmentos artificiales del cabello."
+        },
+        {
+          "nombre": "Diseño de Color Corto",
+          "precio": 1800,
+          "descripcion": "Aplicación creativa de color en cabello corto."
+        },
+        {
+          "nombre": "Diseño de Color Medio",
+          "precio": 2450,
+          "descripcion": "Personalización de color para cabello de longitud media."
+        },
+        {
+          "nombre": "Diseño de Color Largo",
+          "precio": 2950,
+          "descripcion": "Técnicas avanzadas de coloración para cabello largo."
+        },
+        {
+          "nombre": "Rayitos Cabello Corto",
+          "precio": 1200,
+          "descripcion": "Iluminaciones y reflejos para aportar dimensión al cabello."
+        },
+        {
+          "nombre": "Rayitos Cabello Medio",
+          "precio": 1450,
+          "descripcion": "Aplicación de reflejos en cabello medio para un efecto natural."
+        },
+        {
+          "nombre": "Rayitos Cabello Largo",
+          "precio": 1800,
+          "descripcion": "Técnica de iluminación para cabello largo."
+        },
+        {
+          "nombre": "Cortinas Cabello Medio",
+          "precio": 1100,
+          "descripcion": "Mechas estratégicas para enmarcar el rostro y aportar luz."
+        },
+        {
+          "nombre": "Cortinas Cabello Largo",
+          "precio": 1500,
+          "descripcion": "Aplicación de mechas frontales en cabello largo."
+        },
+        {
+          "nombre": "Hidratación Profunda",
+          "precio": 350,
+          "descripcion": "Tratamiento hidratante para complementar procesos químicos."
+        }
+      ]
+    },
+    {
+      "nombre": "Masajes",
+      "servicios": [
+        {
+          "nombre": "Masaje Relajante",
+          "duracion_minutos": 60,
+          "precio": 750,
+          "descripcion": "Masaje suave diseñado para reducir estrés y promover relajación."
+        },
+        {
+          "nombre": "Descontracturante",
+          "duracion_minutos": 60,
+          "precio": 950,
+          "descripcion": "Masaje enfocado en aliviar contracturas y tensión muscular."
+        },
+        {
+          "nombre": "Reflexología",
+          "duracion_minutos": 60,
+          "precio": 750,
+          "descripcion": "Técnica terapéutica basada en la estimulación de puntos reflejos."
+        },
+        {
+          "nombre": "Masaje Deportivo",
+          "duracion_minutos": 60,
+          "precio": 850,
+          "descripcion": "Masaje especializado para recuperación y rendimiento físico."
+        },
+        {
+          "nombre": "Masaje Terapéutico",
+          "duracion_minutos": 60,
+          "precio": 950,
+          "descripcion": "Tratamiento orientado a aliviar molestias musculares y articulares."
+        }
+      ]
+    }
+  ]
+}
