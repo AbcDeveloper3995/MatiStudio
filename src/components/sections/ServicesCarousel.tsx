@@ -21,10 +21,10 @@ export function ServicesCarousel({ servicios }: { servicios: any[] }) {
       
       <div 
         ref={scrollRef}
-        className="flex overflow-x-auto gap-6 pb-8 pt-4 px-4 snap-x snap-mandatory hide-scrollbar"
+        className="flex flex-col md:flex-row overflow-y-auto md:overflow-y-visible md:overflow-x-auto gap-6 pb-8 pt-4 px-4 snap-y snap-mandatory md:snap-x hide-scrollbar max-h-[980px] md:max-h-none"
       >
         {servicios.map((servicio, idx) => (
-          <div key={servicio.nombre} className="min-w-[85vw] md:min-w-[380px] snap-center">
+          <div key={servicio.nombre} className="w-full md:min-w-[380px] snap-center">
             <ServiceCard 
               title={servicio.nombre}
               price={servicio.precio}

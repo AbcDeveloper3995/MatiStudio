@@ -29,7 +29,7 @@ export function Navbar() {
         >
           <a href="#" className="flex items-center gap-2">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/Mati_Studio_vector-2.svg" alt="Mati Studio" className="h-6 w-auto" />
+            <img src="/Mati_Studio_vector-2.svg" alt="Mati Studio" className="h-10 w-10 rounded-full object-cover ring-1 ring-white/10 bg-white/5 p-1" />
           </a>
 
           <nav className="hidden md:flex items-center gap-8">

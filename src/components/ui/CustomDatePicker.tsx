@@ -12,12 +12,12 @@ interface CustomDatePickerProps {
 
 export function CustomDatePicker({ value, onChange, hasError = false }: CustomDatePickerProps) {
   const [isOpen, setIsOpen] = useState(false);
-  
+
   // Start with today's date or the selected date
   const initialDate = value ? new Date(value + 'T12:00:00') : new Date();
   const [currentMonth, setCurrentMonth] = useState(initialDate.getMonth());
   const [currentYear, setCurrentYear] = useState(initialDate.getFullYear());
-  
+
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -37,7 +37,7 @@ export function CustomDatePicker({ value, onChange, hasError = false }: CustomDa
 
   const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
   const firstDayOfMonth = new Date(currentYear, currentMonth, 1).getDay(); // 0 is Sunday
-  
+
   const handlePrevMonth = () => {
     if (currentMonth === 0) {
       setCurrentMonth(11);
@@ -102,8 +102,8 @@ export function CustomDatePicker({ value, onChange, hasError = false }: CustomDa
           >
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={handlePrevMonth}
                 className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-zinc-400 hover:text-white transition-colors"
               >
@@ -112,8 +112,8 @@ export function CustomDatePicker({ value, onChange, hasError = false }: CustomDa
               <span className="text-white font-medium">
                 {monthNames[currentMonth]} {currentYear}
               </span>
-              <button 
-                type="button" 
+              <button
+                type="button"
                 onClick={handleNextMonth}
                 className="w-8 h-8 flex items-center justify-center rounded-full hover:bg-white/10 text-zinc-400 hover:text-white transition-colors"
               >
@@ -134,20 +134,20 @@ export function CustomDatePicker({ value, onChange, hasError = false }: CustomDa
               {Array.from({ length: firstDayOfMonth }).map((_, i) => (
                 <div key={`empty-${i}`} className="w-8 h-8" />
               ))}
-              
+
               {/* Days */}
               {Array.from({ length: daysInMonth }).map((_, i) => {
                 const day = i + 1;
                 const cellDate = new Date(currentYear, currentMonth, day);
-                cellDate.setHours(0,0,0,0);
-                
+                cellDate.setHours(0, 0, 0, 0);
+
                 const isPast = cellDate < today;
-                
+
                 // Check if it's the selected date
                 let isSelected = false;
                 if (value) {
                   const selDate = new Date(value + 'T12:00:00');
-                  selDate.setHours(0,0,0,0);
+                  selDate.setHours(0, 0, 0, 0);
                   isSelected = cellDate.getTime() === selDate.getTime();
                 }
 
