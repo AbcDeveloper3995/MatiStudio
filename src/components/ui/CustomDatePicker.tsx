@@ -142,6 +142,8 @@ export function CustomDatePicker({ value, onChange, hasError = false }: CustomDa
                 cellDate.setHours(0, 0, 0, 0);
 
                 const isPast = cellDate < today;
+                const isMonday = cellDate.getDay() === 1;
+                const isDisabled = isPast || isMonday;
 
                 // Check if it's the selected date
                 let isSelected = false;
@@ -155,12 +157,12 @@ export function CustomDatePicker({ value, onChange, hasError = false }: CustomDa
                   <button
                     key={`day-${day}`}
                     type="button"
-                    disabled={isPast}
+                    disabled={isDisabled}
                     onClick={() => handleDateClick(day)}
                     className={cn(
-                      "w-8 h-8 flex items-center justify-center rounded-full text-sm transition-colors mx-auto",
-                      isPast ? "text-zinc-700 cursor-not-allowed" : "cursor-pointer hover:bg-white/10 hover:text-white",
-                      isSelected ? "bg-brand-orange text-black hover:bg-brand-orange/90 hover:text-black font-semibold" : (!isPast && "text-zinc-300")
+                      "w-8 h-8 flex items-center justify-center rounded-full text-sm transition-colors mx-auto relative group/day",
+                      isDisabled ? "text-zinc-700 cursor-not-allowed" : "cursor-pointer hover:bg-white/10 hover:text-white",
+                      isSelected ? "bg-brand-orange text-black hover:bg-brand-orange/90 hover:text-black font-semibold" : (!isDisabled && "text-zinc-300")
                     )}
                   >
                     {day}
