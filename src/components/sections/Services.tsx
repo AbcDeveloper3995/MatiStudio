@@ -1,9 +1,6 @@
-import { getMatiStudioData } from "@/lib/data";
 import { ServicesFilter } from "./ServicesFilter";
 
-export function Services() {
-  const data = getMatiStudioData();
-  
+export function Services({ data }: { data: any }) {
   if (!data || !data.categorias || data.categorias.length === 0) {
     return null;
   }
