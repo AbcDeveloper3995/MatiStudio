@@ -29,7 +29,8 @@ export function ServicesCarousel({ servicios }: { servicios: any[] }) {
               title={servicio.nombre}
               price={servicio.precio}
               price_desde={servicio.precio_desde}
-              duration={servicio.duracion_minutos}
+              duration={servicio.duracion_minutos || servicio.durationMinutes}
+              durationLabel={servicio.durationLabel}
               description={servicio.descripcion}
               index={idx}
             />

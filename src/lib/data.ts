@@ -6,6 +6,8 @@ export interface Servicio {
   precio?: number;
   precio_desde?: number;
   duracion_minutos?: number;
+  durationMinutes?: number;
+  durationLabel?: string;
   descripcion: string;
 }
 

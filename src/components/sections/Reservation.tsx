@@ -152,11 +152,11 @@ export function Reservation({ data }: { data: any }) {
     }
 
     if (actionType === "reservar") {
-      if (formData.email) {
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(formData.email)) {
-          newErrors.email = "Formato de correo electrónico no válido.";
-        }
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!formData.email) {
+        newErrors.email = "El correo electrónico es obligatorio.";
+      } else if (!emailRegex.test(formData.email)) {
+        newErrors.email = "Formato de correo electrónico no válido.";
       }
       if (!formData.time) {
         newErrors.time = "Por favor selecciona una hora.";
@@ -175,6 +175,7 @@ export function Reservation({ data }: { data: any }) {
     if (formData.phone.length !== 10) return false;
     if (!formData.date) return false;
     if (actionType === "reservar") {
+      if (!formData.email) return false;
       if (!formData.time) return false;
       if (!selectedService) return false;
     }
@@ -198,7 +199,8 @@ export function Reservation({ data }: { data: any }) {
       date: formData.date,
       time: formData.time,
       category: selectedCategory || activeCategoryName,
-      service: selectedService
+      service: selectedService,
+      price: selectedServiceObj?.precio || selectedServiceObj?.precio_desde || 0
     } : {
       name: formData.name,
       phone: formData.phone,
@@ -364,6 +366,7 @@ export function Reservation({ data }: { data: any }) {
                     </motion.div>
                   )}
                 </AnimatePresence>
+                <input type="hidden" name="price" value={selectedServiceObj?.precio || selectedServiceObj?.precio_desde || 0} />
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="flex flex-col gap-2">
@@ -401,7 +404,7 @@ export function Reservation({ data }: { data: any }) {
                       exit={{ opacity: 0, height: 0 }}
                       className="flex flex-col gap-2 origin-top"
                     >
-                      <label htmlFor="email" className="text-sm font-medium text-zinc-400 pl-1">Correo Electrónico (Opcional)</label>
+                      <label htmlFor="email" className="text-sm font-medium text-zinc-400 pl-1">Correo Electrónico *</label>
                       <input 
                         type="email" 
                         id="email" 
@@ -509,10 +512,10 @@ export function Reservation({ data }: { data: any }) {
                     </span>
                   </div>
                 </div>
-                {selectedServiceObj.duracion_minutos && (
+                {(selectedServiceObj.duracion_minutos || selectedServiceObj.durationMinutes || selectedServiceObj.durationLabel) && (
                   <div className="flex flex-col items-end">
                     <span className="text-[10px] uppercase tracking-widest text-zinc-500 mb-1">Duración</span>
-                    <span className="text-lg text-white font-medium">{selectedServiceObj.duracion_minutos} min</span>
+                    <span className="text-lg text-white font-medium">{selectedServiceObj.durationLabel || `${selectedServiceObj.duracion_minutos || selectedServiceObj.durationMinutes} min`}</span>
                   </div>
                 )}
               </div>

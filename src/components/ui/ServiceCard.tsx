@@ -8,12 +8,13 @@ interface ServiceCardProps {
   price?: number;
   price_desde?: number;
   duration?: number;
+  durationLabel?: string;
   description: string;
   className?: string;
   index?: number;
 }
 
-export function ServiceCard({ title, price, price_desde, duration, description, className, index = 0 }: ServiceCardProps) {
+export function ServiceCard({ title, price, price_desde, duration, durationLabel, description, className, index = 0 }: ServiceCardProps) {
   const { selectedService, setSelectedService } = useReservation();
   const isSelected = selectedService === title;
 
@@ -73,10 +74,10 @@ export function ServiceCard({ title, price, price_desde, duration, description, 
               </span>
             </div>
           </div>
-          {duration && (
+          {(duration || durationLabel) && (
             <div className="flex flex-col items-end">
               <span className={cn("text-[10px] uppercase tracking-widest mb-1 font-medium", isSelected ? "text-brand-orange/60" : "text-zinc-500")}>Duración</span>
-              <span className="text-sm text-zinc-300 font-medium">{duration} min</span>
+              <span className="text-sm text-zinc-300 font-medium">{durationLabel || `${duration} min`}</span>
             </div>
           )}
         </div>
