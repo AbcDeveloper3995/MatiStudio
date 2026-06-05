@@ -110,7 +110,7 @@ export function Reservation({ data }: { data: any }) {
     if (val && actionType === "reservar") {
       setIsLoadingTimes(true);
       try {
-        const url = new URL("https://energy-cross-n8n.5rbvev.easypanel.host/webhook-test/disponibilidad");
+        const url = new URL("https://energy-cross-n8n.5rbvev.easypanel.host/webhook/disponibilidad");
         url.searchParams.append("fecha", val);
         const response = await fetch(url.toString());
         if (!response.ok) throw new Error("Network response was not ok");
@@ -189,8 +189,8 @@ export function Reservation({ data }: { data: any }) {
     setIsSubmitting(true);
     
     const endpoint = actionType === "reservar" 
-      ? "https://energy-cross-n8n.5rbvev.easypanel.host/webhook-test/reserva"
-      : "https://energy-cross-n8n.5rbvev.easypanel.host/webhook-test/delete-reserva";
+      ? "https://energy-cross-n8n.5rbvev.easypanel.host/webhook/reserva"
+      : "https://energy-cross-n8n.5rbvev.easypanel.host/webhook/delete-reserva";
 
     const payload = actionType === "reservar" ? {
       name: formData.name,
@@ -488,8 +488,9 @@ export function Reservation({ data }: { data: any }) {
               <div className="absolute top-0 right-0 w-64 h-64 bg-brand-orange/10 blur-[80px] rounded-full pointer-events-none" />
               
               <button 
+                type="button"
                 onClick={() => setIsModalOpen(false)}
-                className="absolute top-6 right-6 text-zinc-400 hover:text-white transition-colors"
+                className="absolute top-6 right-6 text-zinc-400 hover:text-white transition-colors z-10"
               >
                 <X size={24} />
               </button>
